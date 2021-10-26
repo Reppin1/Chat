@@ -1,0 +1,29 @@
+.main {
+  height: 94%;
+  margin: 35px 150px 10px 150px;
+}
+
+.messageItems {
+  overflow-y: scroll;
+  height: 86%;
+}
+
+.inputMain {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.input {
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 66px;
+  height: 66px;
+  width: 900px;
+  min-width: 850px;
+  resize: none;
+  border-radius: 10px;
+  border: none;
+  font-size: 36px;
+  padding: 10px 60px 0 20px;
+}

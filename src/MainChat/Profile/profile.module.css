@@ -1,0 +1,55 @@
+.main {
+  width: 1600px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.header {
+  background-color: #1D9BF0;
+  height: 110px;
+  border-radius: 3px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  padding: 50px 0 0 50px;
+  background-color: #E9E9E9;
+  height: 800px;
+  border-radius: 6px;
+}
+
+.span {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 32px;
+}
+
+.name {
+  font-weight: bolder;
+  margin-right: 10px;
+}
+
+.message {
+  margin-top: 10px;
+}
+
+.img {
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  user-select: none;
+}
+
+.nameInfo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.p {
+  font-size: 28px;
+}

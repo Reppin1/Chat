@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100%;
+}
+
+.mainText {
+}
+
+.text {
+  margin-top: -95px;
+}

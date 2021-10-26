@@ -1,0 +1,48 @@
+.main {
+  display: grid;
+  grid-template-columns: 1fr 18fr 1fr;
+}
+
+.name {
+  margin-top: 45px;
+}
+
+.input {
+  margin-left: 95px;
+  padding-left: 15px;
+  width: 164px;
+  height: 30px;
+  border-radius: 40px;
+  border: none;
+  font-size: 14px;
+}
+
+.exit {
+  margin-top: 45px;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  background-color: white;
+  border-radius: 50%;
+  width: 78px;
+  height: 78px;
+  font-size: 20px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.chat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  background-color: #1D9BF0;
+  width: 78px;
+  height: 78px;
+  user-select: none;
+  cursor: pointer;
+}

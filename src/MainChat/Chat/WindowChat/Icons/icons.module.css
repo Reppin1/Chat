@@ -1,0 +1,47 @@
+.addReactions {
+  position: relative;
+  right: 52px;
+  padding-top: 16px;
+  width: 35px;
+  height: 41px;
+  font-size: 36px;
+  color: #D0CECE;
+  cursor: pointer;
+  transition: opacity 100ms;
+}
+
+.addReactions:hover {
+  opacity: 0.7;
+}
+
+.microphone {
+  position: relative;
+  right: 26px;
+  margin-top: 14px;
+  width: 25px;
+  height: 41px;
+  font-size: 36px;
+  color: #858585;
+  transition: opacity 100ms;
+  cursor: pointer;
+}
+
+.microphone:hover {
+  opacity: 0.7;
+}
+
+.paperClip {
+  position: relative;
+  right: 32px;
+  margin-top: 16px;
+  width: 15px;
+  height: 6px;
+  font-size: 36px;
+  color: #858585;
+  transition: opacity 100ms;
+  cursor: pointer;
+}
+
+.paperClip:hover {
+  opacity: 0.7;
+}

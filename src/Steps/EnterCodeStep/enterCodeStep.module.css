@@ -1,0 +1,23 @@
+.main {
+  align-items: center;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+}
+
+.codes {
+  border: none;
+  border-radius: 6px;
+  font-size: 26px;
+  width: 50px;
+  padding: 15px 15px 15px 17px;
+  margin: 0 0 0 15px;
+}
+
+.input {
+  margin-top: -50px;
+  display: flex;
+  flex-direction: row;
+}

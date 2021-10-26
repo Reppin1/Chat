@@ -1,0 +1,78 @@
+.main {
+
+}
+
+.messageItem {
+  display: flex;
+  flex-direction: row;
+}
+
+.p {
+}
+
+.reverseMessage {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 15px;
+}
+
+.name {
+  font-weight: bolder;
+  margin-right: 10px;
+}
+
+.date {
+  font-weight: normal;
+}
+
+.span {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.reverseName {
+  font-weight: bolder;
+}
+
+.reverseDate {
+  margin-right: 10px;
+  font-weight: normal;
+}
+
+.reverseSpan {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.reverseItem {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.message {
+  margin-top: 10px;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  font-size: 38px;
+  user-select: none;
+}

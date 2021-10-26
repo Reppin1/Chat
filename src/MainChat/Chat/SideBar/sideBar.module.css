@@ -1,0 +1,44 @@
+.wrapper {
+  max-height: 798px;
+  overflow: auto;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  background-color: #C4C4C4;
+  border-radius: 50%;
+  height: 72px;
+  width: 72px;
+  font-size: 20px;
+  user-select: none;
+}
+
+.chatList {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  border-radius: 6px;
+}
+
+.chatList:hover {
+  background-color: #75CAFA;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.active {
+  background-color: #75CAFA;
+}
+
+.name {
+  margin-top: 45px;
+}
