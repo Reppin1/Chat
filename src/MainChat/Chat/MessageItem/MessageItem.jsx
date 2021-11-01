@@ -1,4 +1,4 @@
-import styles from "./messageItem.module.css"
+import styles from "./messageItem.module.css";
 
 const MessageItem = ({message, name, photo, date, me}) => {
 

@@ -1,13 +1,31 @@
-import { Button } from "../Button/Button";
-import styles from "./enterNameStep.module.css"
+import React from 'react';
+import { Button } from '../Button/Button';
+import styles from './enterNameStep.module.css';
+import { MainContext } from '../../App';
+import { useDispatch, useSelector } from "react-redux";
+import { setFirstName, setLastName } from "../../redux/AuthReducer/authReducer";
 
-const EnterNameStep = ({ onClick }) => {
+const EnterNameStep = () => {
+  const { onNextStep } = React.useContext(MainContext);
+  const dispatch = useDispatch();
+  const nextStep = () => {
+    dispatch(setFirstName(fullName.split(' ')[0]))
+    dispatch(setLastName(fullName.split(' ')[1]))
+    onNextStep();
+  };
+  const firstName = useSelector((state) => state.auth.firstName)
+  const lastName = useSelector((state) => state.auth.lastName)
+  const [fullName, setFullName] = React.useState(`${firstName} ${lastName}`)
+  const changeFullName = (event) => {
+    setFullName(event.target.value)
+  }
+
   return (
-    <div className={ styles.main }>
+    <div className={styles.main}>
       <h1>Введите имя и фамилию</h1>
-        <input className={styles.input} placeholder="Имя Фамилия" type="text" />
+      <input value={fullName} onChange={changeFullName} className={styles.input} placeholder="Имя Фамилия" type="text" />
       <div>
-        <Button onClick={onClick}>
+        <Button onClick={nextStep}>
           Следующий шаг
         </Button>
       </div>

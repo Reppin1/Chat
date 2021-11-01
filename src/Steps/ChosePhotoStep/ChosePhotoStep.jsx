@@ -1,12 +1,15 @@
 import { Button } from "../Button/Button";
 import styles from "./chosePhotoStep.module.css";
 import React from "react";
+import { MainContext } from "../../App";
+import { useDispatch, useSelector } from "react-redux";
+import { setAvatar } from "../../redux/AuthReducer/authReducer";
 
-const ChosePhotoStep = ({onClick}) => {
-
-  const [avatarUrl, setAvatarUrl] = React.useState(
-    'https://i.pinimg.com/736x/ac/3e/25/ac3e25c19a979606312463aa6b1cc2fd.jpg',
-  );
+const ChosePhotoStep = () => {
+  const {onNextStep} = React.useContext(MainContext)
+  const avatar = useSelector((state) => state.auth.avatarUrl)
+  const dispatch = useDispatch();
+  const [avatarUrl, setAvatarUrl] = React.useState(avatar);
   const inputFileRef = React.useRef(null);
 
   const handleChangeImage = (event) => {
@@ -16,6 +19,11 @@ const ChosePhotoStep = ({onClick}) => {
       setAvatarUrl(imageUrl);
     }
   };
+
+  const nextStep = () => {
+    dispatch(setAvatar(avatarUrl))
+    onNextStep()
+  }
 
   React.useEffect(() => {
     if (inputFileRef.current) {
@@ -36,7 +44,7 @@ const ChosePhotoStep = ({onClick}) => {
         <input id="image" ref={inputFileRef} type="file" hidden />
       </div>
       <div>
-        <Button onClick={onClick}>
+        <Button onClick={nextStep}>
           Следующий шаг
         </Button>
       </div>

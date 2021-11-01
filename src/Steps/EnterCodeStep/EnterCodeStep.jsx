@@ -6,7 +6,6 @@ import { useHistory } from "react-router-dom";
 const EnterCodeStep = () => {
   let history = useHistory()
   const [codes, setCodes] = React.useState(['', '', '', '']);
-  // const nextDisabled = codes.some((v) => !v);
 
   const user = '123'
 
