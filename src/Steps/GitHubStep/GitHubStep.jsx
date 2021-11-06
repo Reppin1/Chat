@@ -11,7 +11,7 @@ const GitHubStep = () => {
   const dispatch = useDispatch()
 
   const nextStep = async () => {
-     window.open(
+    window.open(
       'http://localhost:4000/auth/github',
       'Auth',
       'width=500,height=500,status=yes,toolbar=no,menubar=no,location=no',
@@ -21,29 +21,30 @@ const GitHubStep = () => {
   const onMessage = ({data, origin}) => {
     const user = data
     if (typeof user === 'string' && user.includes('avatarUrl')) {
-      dispatch(authGit(JSON.parse(user).userData))
+      const userInfo = JSON.parse(user).userData
+      dispatch(authGit(userInfo))
       onNextStep();
     }
   }
 
   React.useEffect(() => {
     window.addEventListener('message', onMessage);
-  }, [] );
+  }, []);
 
- return (
-  <div className={styles.main}>
-   <h1>Import data from GitHub?</h1>
-    <div>
+  return (
+    <div className={styles.main}>
+      <h1>Import data from GitHub?</h1>
       <div>
-        <img width={70} height={70} src={logo} alt="" />
-      </div>
-      <Button onClick={nextStep}>
-        Import data from GitHub
-      </Button>
+        <div>
+          <img width={70} height={70} src={logo} alt="" />
+        </div>
+        <Button onClick={nextStep}>
+          Import data from GitHub
+        </Button>
         <p className={styles.noImport}>Do not import data</p>
+      </div>
     </div>
-  </div>
- );
+  );
 };
 
-export {GitHubStep};
+export { GitHubStep };

@@ -4,8 +4,10 @@ const SET_LAST_NAME = 'SET_LAST_NAME'
 const SET_AVATAR = 'SET_AVATAR'
 const SET_EMAIL = 'SET_EMAIL'
 const SET_PASSWORD = 'SET_PASSWORD'
+const SET_AUTH_INFO = 'SET_AUTH_INFO'
 
 const initialState = {
+  fullName: '',
   firstName: '',
   lastName: '',
   email: '',
@@ -20,7 +22,7 @@ const authReducer = (state = initialState, action) => {
       return { ...state, ...action.payload }
     }
     case SET_FIRST_NAME: {
-      return { ...state, firstName: action.payload }
+      return { ...state, firstName: action.payload, fullName: '' }
     }
     case SET_LAST_NAME: {
       return { ...state, lastName: action.payload }
@@ -33,6 +35,9 @@ const authReducer = (state = initialState, action) => {
     }
     case SET_PASSWORD: {
       return { ...state, password: action.payload }
+    }
+    case SET_AUTH_INFO: {
+      return { ...state, ...action.payload }
     }
     default:
       return state
@@ -69,7 +74,17 @@ export const setPassword = (payload) => ({
   payload
 })
 
+export const setAuthInfo = (payload) => ({
+  type: SET_AUTH_INFO,
+  payload
+})
 
+// export const createUserAndSendSMS = (data) => async () => {
+//   console.log(data)
+//   const result = await UserApi.createUser(data)
+//   if (result.status === 201) {
+//     await instance.get(`/auth/code?email=${data.email}`)
+//   }
+// }
 
 export { authReducer }
-

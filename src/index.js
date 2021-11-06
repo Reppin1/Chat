@@ -15,7 +15,7 @@ ReactDOM.render(
         <Switch>
           <Route path="/" component={App} exact />
           <Route path="/main" component={Chat} exact />
-          <Route path="/profile" component={Profile} />
+          <Route path="/profile" component={Profile} exact />
         </Switch>
       </Provider>
     </Router>

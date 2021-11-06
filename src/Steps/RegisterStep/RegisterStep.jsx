@@ -5,8 +5,9 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import React from "react";
-import { useDispatch } from "react-redux";
-import { setEmail, setPassword } from "../../redux/AuthReducer/authReducer";
+import { useDispatch, useSelector } from "react-redux";
+import { createUserAndSendSMS, setEmail, setPassword } from "../../redux/AuthReducer/authReducer";
+import { instance, UserApi } from "../../api/createUser";
 
 const schema = yup.object({
   email: yup.string().email("Неверная почта").required('Это обязательное поле'),
@@ -16,6 +17,7 @@ const schema = yup.object({
 
 const RegisterStep = () => {
   const dispatch = useDispatch()
+  const userInfo = useSelector((state) => state.auth)
   const {onNextStep} = React.useContext(MainContext)
   const {register, handleSubmit, formState: {errors}} = useForm({
     resolver: yupResolver(schema),
@@ -25,10 +27,26 @@ const RegisterStep = () => {
       confirmPassword: '',
     }
   });
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     dispatch(setEmail(data.email))
     dispatch(setPassword(data.password))
-    onNextStep();
+    try {
+      const userData = {
+        firstName: userInfo.firstName,
+        lastName: userInfo.lastName,
+        email: data.email,
+        password: data.password,
+        avatarUrl: userInfo.avatarUrl
+      }
+      const result = await UserApi.createUser(userData)
+      if (result.status === 201) {
+        await instance.get(`/auth/code?email=${data.email}`)
+        onNextStep();
+      }
+    } catch (e) {
+      alert(`Email: ${data.email} уже используется`)
+      console.log(e)
+    }
   };
   return (
     <div className={styles.main}>

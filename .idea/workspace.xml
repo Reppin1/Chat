@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c84c8900-0338-451e-92d3-bf1d33409e7d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/chat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/chat.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainChat/Chat/Chat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainChat/Chat/Chat.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainChat/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainChat/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Steps/EnterCodeStep/EnterCodeStep.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/EnterCodeStep/EnterCodeStep.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Steps/EnterNameStep/EnterNameStep.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/EnterNameStep/EnterNameStep.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Steps/GitHubStep/GitHubStep.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/GitHubStep/GitHubStep.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Steps/RegisterStep/RegisterStep.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/RegisterStep/RegisterStep.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/AuthReducer/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/AuthReducer/authReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="203Zn5Iuvlghid3AoEoPZLNltjq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../socialNetwork" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\WebStormProject\chatBackend\server\router" />
+      <recent name="E:\WebStormProject\chat\src" />
+      <recent name="E:\WebStormProject\chatBackend" />
+      <recent name="E:\WebStormProject\chat" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Node.js.server.js">
+    <configuration name="server.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="server.js" working-dir="$PROJECT_DIR$/../chatBackend/server">
+      <envs>
+        <env name="GITHUB_CLIENT_ID" value="ea7ae2e1c4d1b00d8e9a" />
+        <env name="GITHUB_CLIENT_SECRET" value="7f2db5b587863af057cee66973b1b14616404eed" />
+        <env name="DB_PORT" value="5432" />
+        <env name="DB_HOST" value="localhost" />
+        <env name="DB_NAME" value="chat" />
+        <env name="DB_USER" value="postgres" />
+        <env name="DB_PASSWORD" value="1234" />
+        <env name="PORT" value="4000" />
+        <env name="JWT_SECRET_KEY" value="huwad123zxcghoul" />
+        <env name="JWT_MAX_AGE" value="30d" />
+      </envs>
+      <method v="2" />
+    </configuration>
+    <configuration name="database" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="database" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="eslint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="eslint" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="main" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="server" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="server" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.server.js" />
+        <item itemvalue="npm.server" />
+        <item itemvalue="npm.eslint" />
+        <item itemvalue="npm.database" />
+        <item itemvalue="npm.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c84c8900-0338-451e-92d3-bf1d33409e7d" name="Changes" comment="" />
+      <created>1635275396520</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635275396520</updated>
+      <workItem from="1635275397869" duration="10625000" />
+      <workItem from="1635345754403" duration="32590000" />
+      <workItem from="1635514014936" duration="60000" />
+      <workItem from="1635514161468" duration="3538000" />
+      <workItem from="1635532258750" duration="8617000" />
+      <workItem from="1635554576034" duration="4449000" />
+      <workItem from="1635630555537" duration="1686000" />
+      <workItem from="1635700178369" duration="1726000" />
+      <workItem from="1635720897444" duration="6143000" />
+      <workItem from="1635777255354" duration="12435000" />
+      <workItem from="1635801167051" duration="26770000" />
+      <workItem from="1635887041556" duration="32612000" />
+      <workItem from="1636078685323" duration="16358000" />
+      <workItem from="1636137179457" duration="349000" />
+      <workItem from="1636189083627" duration="8289000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

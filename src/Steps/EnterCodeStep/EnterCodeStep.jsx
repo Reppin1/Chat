@@ -2,12 +2,11 @@ import { Button } from "../Button/Button";
 import React from "react";
 import styles from "./enterCodeStep.module.css"
 import { useHistory } from "react-router-dom";
+import { instance } from "../../api/createUser";
 
 const EnterCodeStep = () => {
   let history = useHistory()
   const [codes, setCodes] = React.useState(['', '', '', '']);
-
-  const user = '123'
 
   const handleChangeInput = (event) => {
     const index = event.target.getAttribute('id');
@@ -24,10 +23,11 @@ const EnterCodeStep = () => {
     }
   };
 
-  const onSubmit = () => {
-    if (user) {
+  const onSubmit = async (code) => {
+    try {
+      await instance.get(`/auth/code/activate?code=${code}`);
       history.push('/main')
-    } else {
+    } catch (e) {
       alert('Ошибка при активации')
       setCodes(['', '', '', '']);
     }
