@@ -6,8 +6,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { createUserAndSendSMS, setEmail, setPassword } from "../../redux/AuthReducer/authReducer";
-import { instance, UserApi } from "../../api/createUser";
+import { createUserAndSendSMS } from "../../redux/AuthReducer/authReducer";
 
 const schema = yup.object({
   email: yup.string().email("Неверная почта").required('Это обязательное поле'),
@@ -19,7 +18,7 @@ const RegisterStep = () => {
   const dispatch = useDispatch()
   const userInfo = useSelector((state) => state.auth)
   const {onNextStep} = React.useContext(MainContext)
-  const {register, handleSubmit, formState: {errors}} = useForm({
+  const {register, handleSubmit, formState: {errors, touchedFields}} = useForm({
     resolver: yupResolver(schema),
     defaultValues: {
       email: '',
@@ -28,8 +27,6 @@ const RegisterStep = () => {
     }
   });
   const onSubmit = async (data) => {
-    dispatch(setEmail(data.email))
-    dispatch(setPassword(data.password))
     try {
       const userData = {
         firstName: userInfo.firstName,
@@ -38,11 +35,8 @@ const RegisterStep = () => {
         password: data.password,
         avatarUrl: userInfo.avatarUrl
       }
-      const result = await UserApi.createUser(userData)
-      if (result.status === 201) {
-        await instance.get(`/auth/code?email=${data.email}`)
-        onNextStep();
-      }
+      await dispatch(createUserAndSendSMS(userData))
+      onNextStep();
     } catch (e) {
       alert(`Email: ${data.email} уже используется`)
       console.log(e)
@@ -53,7 +47,7 @@ const RegisterStep = () => {
       <h1>Регистрация</h1>
       <div>
         <input {...register("email")} className={styles.input} type="text" placeholder="example@gmail.com" />
-        <p>{errors.email?.message}</p>
+        <p>{touchedFields.email?.message || errors.email?.message}</p>
       </div>
       <div>
         <input {...register("password")} className={styles.input} type="password" placeholder="Пароль" />

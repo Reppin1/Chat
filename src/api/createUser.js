@@ -6,11 +6,17 @@ export const instance = axios.create({
 })
 
 export const UserApi = {
-  createUser({firstName,lastName,email,password,avatarUrl}){
-    return instance.post('auth/registrations', {firstName,lastName,email,password,avatarUrl});
+  async createUser({firstName,lastName,email,password,avatarUrl}){
+    return await instance.post('auth/registrations', {firstName,lastName,email,password,avatarUrl});
   },
-  async authMe(){
-    return await instance.get('/auth/me').then(response => response.data)
+  authMe(){
+    return instance.get('/auth/me').then(response => response.data)
+  },
+  async login({email, password}) {
+    return await instance.post('auth/login', {email, password})
+  },
+  logout() {
+    return instance.get('/auth/logout')
   }
   // sendCode(value) {
   //   return instance.get(`/auth/code?email=${value}`);

@@ -5,22 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c84c8900-0338-451e-92d3-bf1d33409e7d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/chat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/chat.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainChat/Chat/Chat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainChat/Chat/Chat.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainChat/Chat/MessageItem/MessageItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainChat/Chat/MessageItem/MessageItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainChat/Chat/SideBar/SideBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainChat/Chat/SideBar/SideBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainChat/Chat/WindowChat/WindowChat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainChat/Chat/WindowChat/WindowChat.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainChat/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainChat/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Steps/EnterCodeStep/EnterCodeStep.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/EnterCodeStep/EnterCodeStep.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainChat/Header/header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainChat/Header/header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Steps/ChosePhotoStep/ChosePhotoStep.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/ChosePhotoStep/ChosePhotoStep.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Steps/ChosePhotoStep/chosePhotoStep.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/ChosePhotoStep/chosePhotoStep.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Steps/EnterNameStep/EnterNameStep.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/EnterNameStep/EnterNameStep.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Steps/GitHubStep/GitHubStep.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/GitHubStep/GitHubStep.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Steps/GitHubStep/gitHubStep.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/GitHubStep/gitHubStep.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Steps/RegisterStep/RegisterStep.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/RegisterStep/RegisterStep.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/createUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/createUser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/AuthReducer/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/AuthReducer/authReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatBackend/server/Controllers/AuthController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chatBackend/server/Controllers/AuthController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatBackend/server/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chatBackend/server/router/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatBackend/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chatBackend/server/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +56,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../socialNetwork" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pizza-react" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -157,7 +163,24 @@
       <workItem from="1635887041556" duration="32612000" />
       <workItem from="1636078685323" duration="16358000" />
       <workItem from="1636137179457" duration="349000" />
-      <workItem from="1636189083627" duration="8289000" />
+      <workItem from="1636189083627" duration="9528000" />
+      <workItem from="1636256137893" duration="4930000" />
+      <workItem from="1636363963120" duration="8692000" />
+      <workItem from="1636380657120" duration="11256000" />
+      <workItem from="1636398082624" duration="6753000" />
+      <workItem from="1636564113347" duration="2607000" />
+      <workItem from="1636723933496" duration="827000" />
+      <workItem from="1636795129554" duration="15304000" />
+      <workItem from="1636924679053" duration="4415000" />
+      <workItem from="1636997901228" duration="2275000" />
+      <workItem from="1637439579568" duration="766000" />
+      <workItem from="1637861948232" duration="5232000" />
+      <workItem from="1637946399946" duration="2982000" />
+      <workItem from="1637959037434" duration="15377000" />
+      <workItem from="1638429445778" duration="1262000" />
+      <workItem from="1638525085451" duration="1832000" />
+      <workItem from="1638822955231" duration="7466000" />
+      <workItem from="1638909968476" duration="4726000" />
     </task>
     <servers />
   </component>

@@ -8,6 +8,7 @@ import { setAvatar } from "../../redux/AuthReducer/authReducer";
 const ChosePhotoStep = () => {
   const {onNextStep} = React.useContext(MainContext)
   const avatar = useSelector((state) => state.auth.avatarUrl)
+  const initials = useSelector((state) => state.auth.initials)
   const dispatch = useDispatch();
   const [avatarUrl, setAvatarUrl] = React.useState(avatar);
   const inputFileRef = React.useRef(null);
@@ -36,7 +37,8 @@ const ChosePhotoStep = () => {
       <h1>Выберите фото</h1>
       <div>
         <div>
-          {avatarUrl ? <img className={styles.img} src={avatarUrl} alt="" /> : <div className={styles.img}>AK</div>}
+          {avatarUrl ? <img className={styles.img} src={avatarUrl} alt="" /> :
+            <div className={styles.img}>{initials}</div>}
         </div>
         <label htmlFor="image" className={styles.p}>
           Загрузить фото

@@ -41,7 +41,7 @@ const GitHubStep = () => {
         <Button onClick={nextStep}>
           Import data from GitHub
         </Button>
-        <p className={styles.noImport}>Do not import data</p>
+        <p onClick={onNextStep} className={styles.noImport}>Do not import data</p>
       </div>
     </div>
   );

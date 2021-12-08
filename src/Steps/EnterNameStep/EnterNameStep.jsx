@@ -3,7 +3,7 @@ import { Button } from '../Button/Button';
 import styles from './enterNameStep.module.css';
 import { MainContext } from '../../App';
 import { useDispatch, useSelector } from "react-redux";
-import { setFirstName, setLastName } from "../../redux/AuthReducer/authReducer";
+import { setFirstName, setInitials, setLastName } from "../../redux/AuthReducer/authReducer";
 
 const EnterNameStep = () => {
   const {onNextStep} = React.useContext(MainContext);
@@ -11,6 +11,10 @@ const EnterNameStep = () => {
   const nextStep = () => {
     dispatch(setFirstName(fullName.split(' ')[0]))
     dispatch(setLastName(fullName.split(' ')[1]))
+    const firstName = fullName.split(' ')[0].split('')[0]
+    const lastName = fullName.split(' ')[1].split('')[0]
+    const initials = firstName + lastName
+    dispatch(setInitials(initials))
     onNextStep();
   };
   const name = useSelector((state) => state.auth.fullName)

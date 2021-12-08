@@ -19,6 +19,11 @@
 
 .exit {
   margin-top: 45px;
+  cursor: pointer;
+}
+
+.exit:hover {
+  opacity: 0.5;
 }
 
 .img {
