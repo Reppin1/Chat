@@ -1,33 +1,39 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Button } from '../Button/Button';
 import styles from './enterNameStep.module.css';
-import { MainContext } from '../../App';
-import { useDispatch, useSelector } from "react-redux";
-import { setFirstName, setInitials, setLastName } from "../../redux/AuthReducer/authReducer";
+import { MainContext } from '../Context/mainContext';
+import { setFirstName, setLastName } from '../../redux/AuthReducer/authReducer';
 
 const EnterNameStep = () => {
+  const name = useSelector((state) => state.auth.fullName);
+
+  const [fullName, setFullName] = React.useState(`${name}`);
+
   const {onNextStep} = React.useContext(MainContext);
+
   const dispatch = useDispatch();
+
   const nextStep = () => {
-    dispatch(setFirstName(fullName.split(' ')[0]))
-    dispatch(setLastName(fullName.split(' ')[1]))
-    const firstName = fullName.split(' ')[0].split('')[0]
-    const lastName = fullName.split(' ')[1].split('')[0]
-    const initials = firstName + lastName
-    dispatch(setInitials(initials))
+    dispatch(setFirstName(fullName.split(' ')[0]));
+    dispatch(setLastName(fullName.split(' ')[1]));
     onNextStep();
   };
-  const name = useSelector((state) => state.auth.fullName)
-  const [fullName, setFullName] = React.useState(`${name}`)
+
   const changeFullName = (event) => {
-    setFullName(event.target.value)
-  }
+    setFullName(event.target.value);
+  };
 
   return (
     <div className={styles.main}>
       <h1>Введите имя и фамилию</h1>
-      <input value={fullName} onChange={changeFullName} className={styles.input} placeholder="Имя Фамилия"
-             type="text" />
+      <input
+        value={fullName}
+        onChange={changeFullName}
+        className={styles.input}
+        placeholder="Имя Фамилия"
+        type="text"
+      />
       <div>
         <Button onClick={nextStep}>
           Следующий шаг

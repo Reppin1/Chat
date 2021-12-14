@@ -5,28 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c84c8900-0338-451e-92d3-bf1d33409e7d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/chat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/chat.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chatBackend/server/router/dialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainChat/Chat/Chat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainChat/Chat/Chat.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainChat/Chat/MessageItem/MessageItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainChat/Chat/MessageItem/MessageItem.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainChat/Chat/SideBar/SideBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainChat/Chat/SideBar/SideBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainChat/Chat/WindowChat/Icons/Icons.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainChat/Chat/WindowChat/Icons/Icons.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainChat/Chat/WindowChat/WindowChat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainChat/Chat/WindowChat/WindowChat.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainChat/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainChat/Header/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainChat/Header/header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainChat/Header/header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainChat/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainChat/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Steps/Button/Button.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/Button/Button.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Steps/ChosePhotoStep/ChosePhotoStep.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/ChosePhotoStep/ChosePhotoStep.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Steps/ChosePhotoStep/chosePhotoStep.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/ChosePhotoStep/chosePhotoStep.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Steps/EnterCodeStep/EnterCodeStep.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/EnterCodeStep/EnterCodeStep.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Steps/EnterNameStep/EnterNameStep.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/EnterNameStep/EnterNameStep.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Steps/GitHubStep/GitHubStep.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/GitHubStep/GitHubStep.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Steps/GitHubStep/gitHubStep.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/GitHubStep/gitHubStep.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Steps/GrayBlock/GrayBlock.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/GrayBlock/GrayBlock.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Steps/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/Login/Login.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Steps/RegisterStep/RegisterStep.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/RegisterStep/RegisterStep.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Steps/WelcomeStep/WelcomeStep.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/WelcomeStep/WelcomeStep.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/createUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/createUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/AuthReducer/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/AuthReducer/authReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/DialogReducer/dialogReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/DialogReducer/dialogReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/MessageReducer/messageReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/MessageReducer/messageReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatBackend/migrations/20211029140945-create-user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatBackend/migrations/20211102185732-create-code.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatBackend/models/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chatBackend/models/code.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatBackend/models/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatBackend/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chatBackend/models/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../chatBackend/server/Controllers/AuthController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chatBackend/server/Controllers/AuthController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatBackend/server/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chatBackend/server/router/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatBackend/server/Controllers/DialogController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chatBackend/server/Controllers/DialogController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatBackend/server/core/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chatBackend/server/core/database.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatBackend/server/core/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chatBackend/server/core/passport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatBackend/server/router/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chatBackend/server/router/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatBackend/server/router/message.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../chatBackend/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chatBackend/server/server.js" afterDir="false" />
+    </list>
+    <list id="d37f559c-04e6-4166-8052-31bd249aaa96" name="Changes by ImperialEagleX" comment="">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Steps/ChosePhotoStep/ChosePhotoStep.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/ChosePhotoStep/ChosePhotoStep.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Steps/EnterCodeStep/EnterCodeStep.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/EnterCodeStep/EnterCodeStep.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Steps/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steps/Login/Login.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +67,45 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/Steps/ChosePhotoStep/ChosePhotoStep.jsx">
+      <ranges>
+        <range start1="0" end1="6" start2="0" end2="7" changelist="c84c8900-0338-451e-92d3-bf1d33409e7d" />
+        <range start1="8" end1="11" start2="9" end2="13" changelist="c84c8900-0338-451e-92d3-bf1d33409e7d" />
+        <range start1="24" end1="27" start2="26" end2="29" changelist="c84c8900-0338-451e-92d3-bf1d33409e7d" />
+        <range start1="39" end1="41" start2="41" end2="43" changelist="c84c8900-0338-451e-92d3-bf1d33409e7d" />
+        <range start1="44" end1="44" start2="46" end2="47" changelist="d37f559c-04e6-4166-8052-31bd249aaa96" />
+        <range start1="45" end1="46" start2="48" end2="48" changelist="d37f559c-04e6-4166-8052-31bd249aaa96" />
+        <range start1="57" end1="57" start2="59" end2="60" changelist="c84c8900-0338-451e-92d3-bf1d33409e7d" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Steps/EnterCodeStep/EnterCodeStep.jsx">
+      <ranges>
+        <range start1="0" end1="5" start2="0" end2="5" changelist="c84c8900-0338-451e-92d3-bf1d33409e7d" />
+        <range start1="7" end1="8" start2="7" end2="8" changelist="c84c8900-0338-451e-92d3-bf1d33409e7d" />
+        <range start1="10" end1="11" start2="10" end2="21" changelist="c84c8900-0338-451e-92d3-bf1d33409e7d" />
+        <range start1="12" end1="13" start2="22" end2="23" changelist="c84c8900-0338-451e-92d3-bf1d33409e7d" />
+        <range start1="21" end1="22" start2="31" end2="32" changelist="d37f559c-04e6-4166-8052-31bd249aaa96" />
+        <range start1="24" end1="34" start2="34" end2="34" changelist="c84c8900-0338-451e-92d3-bf1d33409e7d" />
+        <range start1="39" end1="47" start2="39" end2="51" changelist="c84c8900-0338-451e-92d3-bf1d33409e7d" />
+        <range start1="56" end1="56" start2="60" end2="61" changelist="c84c8900-0338-451e-92d3-bf1d33409e7d" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Steps/Login/Login.jsx">
+      <ranges>
+        <range start1="0" end1="8" start2="0" end2="8" changelist="c84c8900-0338-451e-92d3-bf1d33409e7d" />
+        <range start1="10" end1="14" start2="10" end2="14" changelist="c84c8900-0338-451e-92d3-bf1d33409e7d" />
+        <range start1="18" end1="19" start2="18" end2="19" changelist="c84c8900-0338-451e-92d3-bf1d33409e7d" />
+        <range start1="22" end1="24" start2="22" end2="24" changelist="c84c8900-0338-451e-92d3-bf1d33409e7d" />
+        <range start1="26" end1="28" start2="26" end2="28" changelist="c84c8900-0338-451e-92d3-bf1d33409e7d" />
+        <range start1="29" end1="30" start2="29" end2="30" changelist="c84c8900-0338-451e-92d3-bf1d33409e7d" />
+        <range start1="32" end1="35" start2="32" end2="35" changelist="c84c8900-0338-451e-92d3-bf1d33409e7d" />
+        <range start1="39" end1="41" start2="39" end2="41" changelist="c84c8900-0338-451e-92d3-bf1d33409e7d" />
+        <range start1="45" end1="46" start2="45" end2="46" changelist="d37f559c-04e6-4166-8052-31bd249aaa96" />
+        <range start1="52" end1="52" start2="52" end2="53" changelist="c84c8900-0338-451e-92d3-bf1d33409e7d" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectId" id="203Zn5Iuvlghid3AoEoPZLNltjq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -56,6 +118,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../pizza-react" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -63,7 +126,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -75,7 +138,13 @@
       <recent name="E:\WebStormProject\chat" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.server.js">
+  <component name="RunManager" selected="HTTP Request.rest-api#1">
+    <configuration name="rest-api#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="rest-api_1#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="server.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="server.js" working-dir="$PROJECT_DIR$/../chatBackend/server">
       <envs>
         <env name="GITHUB_CLIENT_ID" value="ea7ae2e1c4d1b00d8e9a" />
@@ -91,41 +160,21 @@
       </envs>
       <method v="2" />
     </configuration>
-    <configuration name="database" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="database" />
+        <script value="lint" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="eslint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="lint:fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="eslint" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="main" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="main" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="server" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="server" />
+        <script value="lint:fix" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -133,11 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.rest-api#1" />
+        <item itemvalue="npm.lint:fix" />
+        <item itemvalue="npm.lint" />
+        <item itemvalue="HTTP Request.rest-api_1#1" />
         <item itemvalue="Node.js.server.js" />
-        <item itemvalue="npm.server" />
-        <item itemvalue="npm.eslint" />
-        <item itemvalue="npm.database" />
-        <item itemvalue="npm.main" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +229,14 @@
       <workItem from="1638429445778" duration="1262000" />
       <workItem from="1638525085451" duration="1832000" />
       <workItem from="1638822955231" duration="7466000" />
-      <workItem from="1638909968476" duration="4726000" />
+      <workItem from="1638909968476" duration="6091000" />
+      <workItem from="1638994990196" duration="2081000" />
+      <workItem from="1639095733529" duration="1576000" />
+      <workItem from="1639154181676" duration="25944000" />
+      <workItem from="1639243202506" duration="9000" />
+      <workItem from="1639248495645" duration="16932000" />
+      <workItem from="1639335834590" duration="15231000" />
+      <workItem from="1639407496150" duration="30276000" />
     </task>
     <servers />
   </component>

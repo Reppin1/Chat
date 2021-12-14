@@ -1,16 +1,26 @@
-import { Button } from "../Button/Button";
-import React from "react";
-import styles from "./enterCodeStep.module.css"
-import { useHistory } from "react-router-dom";
-import { instance } from "../../api/createUser";
+import React from 'react';
+import { useHistory } from 'react-router-dom';
+import { Button } from '../Button/Button';
+import styles from './enterCodeStep.module.css';
+import { instance } from '../../api/createUser';
 
 const EnterCodeStep = () => {
-  let history = useHistory()
+  const history = useHistory();
   const [codes, setCodes] = React.useState(['', '', '', '']);
 
-  const handleChangeInput = (event) => {
+  const onSubmit = async (code) => {
+    try {
+      await instance.get(`/auth/code/activate?code=${code}`);
+      history.push('/main');
+    } catch (e) {
+      alert('Ошибка при активации');
+      setCodes(['', '', '', '']);
+    }
+  };
+
+  const handleChangeInput = async (event) => {
     const index = event.target.getAttribute('id');
-    const value = event.target.value;
+    const { value } = event.target;
     setCodes((prev) => {
       const newArr = [...prev];
       newArr[index] = value;
@@ -19,32 +29,26 @@ const EnterCodeStep = () => {
     if (event.target.nextSibling) {
       (event.target.nextSibling).focus();
     } else {
-      onSubmit([...codes, value].join(''));
+      await onSubmit([...codes, value].join(''));
     }
   };
-
-  const onSubmit = async (code) => {
-    try {
-      await instance.get(`/auth/code/activate?code=${code}`);
-      history.push('/main')
-    } catch (e) {
-      alert('Ошибка при активации')
-      setCodes(['', '', '', '']);
-    }
-  }
 
   return (
     <div className={styles.main}>
       <h1>Введите код</h1>
       <div className={styles.input}>
-        {codes.map((el, index) => <input
-          className={styles.codes} key={index}
-          type="tel"
-          placeholder="X"
-          maxLength={1}
-          id={index}
-          onChange={handleChangeInput}
-          value={el} />)}
+        {codes.map((el, index) => (
+          <input
+            className={styles.codes}
+            key={index}
+            type="tel"
+            placeholder="X"
+            maxLength={1}
+            id={index}
+            onChange={handleChangeInput}
+            value={el}
+          />
+        ))}
       </div>
       <Button onClick={onSubmit}>
         Следующий шаг

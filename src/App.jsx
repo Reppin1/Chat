@@ -1,17 +1,18 @@
 import './App.css';
 import React from 'react';
+import { Redirect } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { GrayBlock } from './Steps/GrayBlock/GrayBlock';
 import { WelcomeStep } from './Steps/WelcomeStep/WelcomeStep';
 import { GitHubStep } from './Steps/GitHubStep/GitHubStep';
 import { EnterNameStep } from './Steps/EnterNameStep/EnterNameStep';
 import { ChosePhotoStep } from './Steps/ChosePhotoStep/ChosePhotoStep';
+import { MainContext } from './Steps/Context/mainContext';
 import { RegisterStep } from './Steps/RegisterStep/RegisterStep';
 import { EnterCodeStep } from './Steps/EnterCodeStep/EnterCodeStep';
-import { UserApi } from "./api/createUser";
-import { Redirect } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { setAuthInfo } from "./redux/AuthReducer/authReducer";
-import { Login } from "./Steps/Login/Login";
+import { UserApi } from './api/createUser';
+import { setAuthInfo } from './redux/AuthReducer/authReducer';
+import { Login } from './Steps/Login/Login';
 
 const steps = {
   0: WelcomeStep,
@@ -23,12 +24,10 @@ const steps = {
   6: EnterCodeStep,
 };
 
-export const MainContext = React.createContext(null);
-
 function App() {
   const [step, setStep] = React.useState(0);
   const [redirect, setRedirect] = React.useState(false);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const Step = steps[step];
 
   const onNextStep = () => {
@@ -37,22 +36,21 @@ function App() {
 
   React.useEffect(() => {
     (async () => {
-      const user = await UserApi.authMe()
+      const user = await UserApi.authMe();
       if (user) {
         if (user.isActive) {
-          dispatch(setAuthInfo(user))
-          setRedirect(true)
-          return
-        } else {
-          return setStep(6)
+          dispatch(setAuthInfo(user));
+          setRedirect(true);
+          return null;
         }
+        return setStep(6);
       }
-      return setStep(0)
-    })()
-  }, [])
+      return setStep(0);
+    })();
+  }, [dispatch]);
 
   if (redirect) {
-    return <Redirect to="/main" />
+    return <Redirect to="/main" />;
   }
 
   return (

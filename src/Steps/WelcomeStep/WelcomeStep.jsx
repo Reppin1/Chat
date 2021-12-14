@@ -1,12 +1,12 @@
-import style from './welcomeStep.module.css'
-import { Button } from "../Button/Button";
-import { MainContext } from "../../App";
-import React from "react";
+import React from 'react';
+import style from './welcomeStep.module.css';
+import { Button } from '../Button/Button';
+import { MainContext } from '../Context/mainContext';
 
 const WelcomeStep = () => {
-  const {onNextStep} = React.useContext(MainContext);
+  const { onNextStep } = React.useContext(MainContext);
   const nextStep = () => {
-    onNextStep()
+    onNextStep();
   };
 
   return (

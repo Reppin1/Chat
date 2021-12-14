@@ -1,32 +1,24 @@
-import styles from "./chat.module.css";
-import React from "react";
-import { Header } from "../Header/Header";
-import { SideBar } from "./SideBar/SideBar";
-import { WindowChat } from "./WindowChat/WindowChat";
-import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
-import { setInitials } from "../../redux/AuthReducer/authReducer";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { Redirect } from 'react-router-dom';
+import styles from './chat.module.css';
+import { Header } from '../Header/Header';
+import { SideBar } from './SideBar/SideBar';
+import { WindowChat } from './WindowChat/WindowChat';
 
 const Chat = () => {
-  const isActive = useSelector((state) => state.auth.isActive)
-  const dispatch = useDispatch()
-  const firstName = useSelector((state) => state.auth.firstName).split('')[0]
-  const lastName = useSelector((state) => state.auth.lastName).split('')[0]
-  const checkInitials = useSelector((state) => state.auth.initials)
-  const initials = firstName + lastName
+  const isActive = useSelector((state) => state.auth.isActive);
+
   const [redirect, setRedirect] = React.useState(false);
 
   React.useEffect(() => {
     if (!isActive) {
-      setRedirect(true)
+      setRedirect(true);
     }
-    if (!checkInitials) {
-      dispatch(setInitials(initials))
-    }
-  }, [])
+  }, [isActive]);
 
   if (redirect) {
-    return <Redirect to="/" />
+    return <Redirect to="/" />;
   }
 
   return (

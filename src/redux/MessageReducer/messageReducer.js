@@ -1,20 +1,20 @@
-const SET_MESSAGE = 'SET_MESSAGE'
+const SET_MESSAGES = 'SET_MESSAGES';
 
 const initialState = {
-  item: [],
-}
+  messages: [],
+};
 
 export const messageReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_MESSAGE: {
-      return  { ...state, item: action.payload }
+    case SET_MESSAGES: {
+      return {...state, messages: action.payload};
     }
     default:
-      return state
+      return state;
   }
-}
+};
 
 export const setMessage = (item) => ({
-  type: SET_MESSAGE,
-  payload: item
-})
+  type: SET_MESSAGES,
+  payload: item,
+});
