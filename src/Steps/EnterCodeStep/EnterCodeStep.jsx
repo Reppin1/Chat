@@ -35,7 +35,7 @@ const EnterCodeStep = () => {
 
   return (
     <div className={styles.main}>
-      <h1>Введите код</h1>
+      <h1 className={styles.h1}>Введите код</h1>
       <div className={styles.input}>
         {codes.map((el, index) => (
           <input

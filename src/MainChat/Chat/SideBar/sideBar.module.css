@@ -8,6 +8,16 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  max-width: 350px;
+}
+
+.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 347px;
+  padding-bottom: 347px;
+  color: white;
 }
 
 .img {
@@ -15,30 +25,31 @@
   justify-content: center;
   align-items: center;
   margin: 15px;
-  background-color: #C4C4C4;
   border-radius: 50%;
   height: 72px;
   width: 72px;
   font-size: 20px;
   user-select: none;
+  background-color: white;
 }
 
 .chatList {
+  box-shadow: 0 0 3px gray;
   display: grid;
   grid-template-columns: 2fr 5fr;
-  border-radius: 6px;
 }
 
 .chatList:hover {
-  background-color: #75CAFA;
+  background-color: #683db8;
   cursor: pointer;
   transition: 300ms;
 }
 
 .active {
-  background-color: #75CAFA;
+  background-color: #683db8;
 }
 
 .name {
+  color: white;
   margin-top: 45px;
 }

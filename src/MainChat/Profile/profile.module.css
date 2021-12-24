@@ -6,18 +6,36 @@
 }
 
 .header {
-  background-color: #1D9BF0;
   height: 110px;
   border-radius: 3px;
+}
+
+.button {
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 26px;
+}
+
+.button:hover {
+  background-color: #683db8;
+  color: white;
+  cursor: pointer;
+  transition: 300ms;
 }
 
 .item {
   display: flex;
   flex-direction: row;
   padding: 50px 0 0 50px;
-  background-color: #E9E9E9;
   height: 800px;
-  border-radius: 6px;
+  border-radius: 0 0 6px 0;
+  box-shadow: 0 0 3px gray;
+}
+
+.id {
+  color: white;
+  margin-left: 900px;
 }
 
 .span {
@@ -28,6 +46,7 @@
 }
 
 .name {
+  color: white;
   font-weight: bolder;
   margin-right: 10px;
 }
@@ -37,8 +56,13 @@
 }
 
 .img {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   height: 120px;
+  font-size: 38px;
   width: 120px;
   user-select: none;
 }
@@ -51,5 +75,6 @@
 }
 
 .p {
+  color: white;
   font-size: 28px;
 }

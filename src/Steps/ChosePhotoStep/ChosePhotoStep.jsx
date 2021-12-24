@@ -36,7 +36,7 @@ const ChosePhotoStep = () => {
 
   return (
     <div className={styles.main}>
-      <h1>Выберите фото</h1>
+      <h1 className={styles.h1}>Выберите фото</h1>
       <div>
         <div>
           {avatarUrl ? <img className={styles.img} src={avatarUrl} alt="" />

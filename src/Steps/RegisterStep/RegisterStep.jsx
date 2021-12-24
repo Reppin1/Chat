@@ -44,7 +44,7 @@ const RegisterStep = () => {
   };
   return (
     <div className={styles.main}>
-      <h1>Регистрация</h1>
+      <h1 className={styles.h1}>Регистрация</h1>
       <div>
         <input {...register('email')} className={styles.input} type="text" placeholder="example@gmail.com" />
         <p>{touchedFields.email?.message || errors.email?.message}</p>

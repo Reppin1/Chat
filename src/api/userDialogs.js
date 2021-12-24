@@ -9,4 +9,7 @@ export const dialogApi = {
   getDialogs() {
     return instance.get('/dialog');
   },
+  createDialog({userId}) {
+    return instance.post('/dialog', {userId});
+  },
 };

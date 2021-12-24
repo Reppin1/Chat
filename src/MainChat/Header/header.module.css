@@ -1,24 +1,17 @@
 .main {
   display: grid;
-  grid-template-columns: 1fr 18fr 1fr;
+  grid-template-columns: 1fr 1fr 18fr 1fr;
+  box-shadow: 0 0 3px gray;
 }
 
 .name {
+  color: white;
   margin-top: 45px;
 }
 
-.input {
-  margin-left: 95px;
-  padding-left: 15px;
-  width: 164px;
-  height: 30px;
-  border-radius: 40px;
-  border: none;
-  font-size: 14px;
-}
-
 .exit {
-  margin: auto;
+  color: white;
+  margin: 10px 34px;
   padding: 5px;
   border: none;
   background-color: transparent;
@@ -53,7 +46,6 @@
   justify-content: center;
   align-items: center;
   margin: 15px;
-  background-color: #1D9BF0;
   width: 78px;
   height: 78px;
   user-select: none;

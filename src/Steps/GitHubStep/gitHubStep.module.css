@@ -10,7 +10,12 @@
   height: 40px;
 }
 
+.h1 {
+  color: white;
+}
+
 .noImport {
+  color: white;
   cursor: pointer;
   font-weight: bold;
 }

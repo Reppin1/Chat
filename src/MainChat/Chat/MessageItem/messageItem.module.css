@@ -8,6 +8,32 @@
 }
 
 .p {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 550px;
+  word-break: break-word;
+}
+
+.pReverse {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 550px;
+  min-width: 10px;
+  word-break: break-word;
+}
+
+.messageText {
+  background-color: white;
+  border-radius: 8px;
+  color: black;
+  padding: 10px;
+}
+
+.reverseMessageText {
+  background-color: #683db8;
+  border-radius: 8px;
+  padding: 10px;
+  color: white;
 }
 
 .reverseMessage {
@@ -16,13 +42,20 @@
   margin-right: 15px;
 }
 
+.reverseMessageItem {
+  display: flex;
+  max-width: 400px;
+}
+
 .name {
+  color: white;
   font-weight: bolder;
   margin-right: 10px;
 }
 
 .date {
   font-weight: normal;
+  color: white;
 }
 
 .span {
@@ -33,9 +66,11 @@
 
 .reverseName {
   font-weight: bolder;
+  color: white;
 }
 
 .reverseDate {
+  color: white;
   margin-right: 10px;
   font-weight: normal;
 }
@@ -65,14 +100,22 @@
 }
 
 .img {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
   background-color: white;
   border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  font-size: 38px;
+  height: 50px;
+  width: 50px;
+  font-size: 24px;
   user-select: none;
+}
+
+.empty {
+  position: absolute;
+  margin-left: 110px;
+  top: 50%;
+  left: 50%;
 }

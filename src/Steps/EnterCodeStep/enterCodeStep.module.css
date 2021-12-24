@@ -7,6 +7,10 @@
   text-align: center;
 }
 
+.h1 {
+  color: white;
+}
+
 .codes {
   border: none;
   border-radius: 6px;

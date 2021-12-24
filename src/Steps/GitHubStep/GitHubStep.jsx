@@ -34,7 +34,7 @@ const GitHubStep = () => {
 
   return (
     <div className={styles.main}>
-      <h1>Import data from GitHub?</h1>
+      <h1 className={styles.h1}>Import data from GitHub?</h1>
       <div>
         <div>
           <img width={70} height={70} src={logo} alt="" />

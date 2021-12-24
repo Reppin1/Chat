@@ -36,7 +36,7 @@ const Login = () => {
 
   return (
     <div className={styles.main}>
-      <h2>У вас уже есть аккаунт?</h2>
+      <h2 className={styles.h2}>У вас уже есть аккаунт?</h2>
       <input {...register('email')} className={styles.input} type="text" placeholder="example@gmail.com" />
       <input {...register('password')} className={styles.input} type="password" placeholder="Пароль" />
       <div>

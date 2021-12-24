@@ -15,9 +15,11 @@ const EnterNameStep = () => {
   const dispatch = useDispatch();
 
   const nextStep = () => {
-    dispatch(setFirstName(fullName.split(' ')[0]));
-    dispatch(setLastName(fullName.split(' ')[1]));
-    onNextStep();
+    if (fullName.trim()) {
+      dispatch(setFirstName(fullName.split(' ')[0]));
+      dispatch(setLastName(fullName.split(' ')[1]));
+      onNextStep();
+    }
   };
 
   const changeFullName = (event) => {
@@ -26,7 +28,7 @@ const EnterNameStep = () => {
 
   return (
     <div className={styles.main}>
-      <h1>Введите имя и фамилию</h1>
+      <h1 className={styles.h1}>Введите имя и фамилию</h1>
       <input
         value={fullName}
         onChange={changeFullName}

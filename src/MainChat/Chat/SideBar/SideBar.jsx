@@ -1,18 +1,19 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './sideBar.module.css';
-import { setCurrentDialogId, setDialogs } from '../../../redux/DialogReducer/dialogReducer';
+// eslint-disable-next-line import/named
+import { setActiveDialog, setCurrentDialogId, setDialogs } from '../../../redux/DialogReducer/dialogReducer';
 import { dialogApi } from '../../../api/userDialogs';
 import { getInitials } from '../../../utils/getInitials';
+import { EmptyBlock } from '../../../Helpers/Empty';
 
 const SideBar = () => {
   const dispatch = useDispatch();
   const dialogs = useSelector((state) => state.dialogs.dialogs);
-
-  const [active, setActive] = React.useState(null);
+  const activeDialog = useSelector((state) => state.dialogs.activeDialog);
 
   const selectDialog = (id) => {
-    setActive(id);
+    dispatch(setActiveDialog(id));
     dispatch(setCurrentDialogId(id));
   };
 
@@ -34,7 +35,7 @@ const SideBar = () => {
                 tabIndex={0}
                 onClick={() => selectDialog(el.dialogId)}
                 key={el.dialogId}
-                className={`${styles.chatList} ${el.dialogId === active ? styles.active
+                className={`${styles.chatList} ${el.dialogId === activeDialog ? styles.active
                   : ''}`}
               >
                 {el.users[0].avatarUrl ? <img className={styles.img} src={el.users[0].avatarUrl} alt="" />
@@ -51,9 +52,9 @@ const SideBar = () => {
           </div>
         )
         : (
-          <p>
-            У вас нет диалогов
-          </p>
+          <div className={styles.empty}>
+            <EmptyBlock description="У вас нет диалогов" />
+          </div>
         )}
     </div>
   );

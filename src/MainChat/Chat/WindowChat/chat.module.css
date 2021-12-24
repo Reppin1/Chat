@@ -8,6 +8,19 @@
   height: 86%;
 }
 
+.empty {
+  color: white;
+  position: absolute;
+  margin-left: 110px;
+  top: 50%;
+  left: 50%;
+}
+
+.inputMainNotFound {
+  margin-top: 700px;
+  display: flex;
+}
+
 .inputMain {
   display: flex;
   justify-content: center;
@@ -19,7 +32,7 @@
   overflow-y: auto;
   min-height: 66px;
   height: 66px;
-  width: 900px;
+  width: 700px;
   min-width: 850px;
   resize: none;
   border-radius: 10px;

@@ -6,7 +6,12 @@
   height: 100%;
 }
 
+.h2 {
+  color: white;
+}
+
 .register {
+  color: white;
   cursor: pointer;
 }
 
