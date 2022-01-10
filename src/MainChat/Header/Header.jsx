@@ -6,6 +6,7 @@ import logo from '../../assets/chat.png';
 import { UserApi } from '../../api/createUser';
 import { getInitials } from '../../utils/getInitials';
 import { FindUserInput } from './FindUserInput/FindUserInput';
+import { socket } from '../../Socket/socket';
 
 const Header = () => {
   const path = useLocation().pathname;
@@ -18,6 +19,15 @@ const Header = () => {
     await UserApi.logout();
     document.location.reload();
   };
+
+  const logSocket = (info) => {
+    console.log(info);
+  };
+
+  React.useEffect(() => {
+    socket.on('connect', logSocket);
+    return () => socket.removeListener('connect', logSocket);
+  }, []);
 
   return (
     <div className={styles.main}>

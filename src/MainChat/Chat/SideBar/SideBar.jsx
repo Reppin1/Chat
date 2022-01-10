@@ -2,10 +2,15 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './sideBar.module.css';
 // eslint-disable-next-line import/named
-import { setActiveDialog, setCurrentDialogId, setDialogs } from '../../../redux/DialogReducer/dialogReducer';
+import {
+  addDialog, setActiveDialog, setCurrentDialogId, setDialogs,
+} from '../../../redux/DialogReducer/dialogReducer';
 import { dialogApi } from '../../../api/userDialogs';
 import { getInitials } from '../../../utils/getInitials';
 import { EmptyBlock } from '../../../Helpers/Empty';
+import { socket } from '../../../Socket/socket';
+import { lastSeen } from '../../../Helpers/lastSeen';
+// import { getDate } from '../../../Helpers/localizationDate';
 
 const SideBar = () => {
   const dispatch = useDispatch();
@@ -17,11 +22,20 @@ const SideBar = () => {
     dispatch(setCurrentDialogId(id));
   };
 
+  const addNewUserToSidebar = (infoDialog) => {
+    dispatch(addDialog(infoDialog));
+  };
+
   React.useEffect(() => {
     (async () => {
       const response = await dialogApi.getDialogs();
       dispatch(setDialogs(response.data));
     })();
+  }, [dispatch]);
+
+  React.useEffect(() => {
+    socket.on('SERVER:NEW_DIALOG', addNewUserToSidebar);
+    return () => socket.removeListener('SERVER:NEW_DIALOG', addNewUserToSidebar);
   }, [dispatch]);
 
   return (
@@ -38,14 +52,25 @@ const SideBar = () => {
                 className={`${styles.chatList} ${el.dialogId === activeDialog ? styles.active
                   : ''}`}
               >
-                {el.users[0].avatarUrl ? <img className={styles.img} src={el.users[0].avatarUrl} alt="" />
+                {el.user.avatarUrl
+                  ? (
+                    <div className={styles.photo}>
+                      <img className={styles.img} src={el.user.avatarUrl} alt="" />
+                      {el.user.isOnline ? <div className={styles.onlineIcon} /> : ''}
+                    </div>
+                  )
                   : (
-                    <div className={styles.img}>
-                      {getInitials(el.users[0].firstName, el.users[0].lastName)}
+                    <div className={styles.photo}>
+                      <div className={styles.img}>
+                        {getInitials(el.user.firstName, el.user.lastName)}
+                        {el.user.isOnline ? <div className={styles.onlineIcon} /> : ''}
+                      </div>
                     </div>
                   )}
                 <div className={styles.name}>
-                  {`${el.users[0].firstName} ${el.users[0].lastName}`}
+                  {`${el.user.firstName} ${el.user.lastName}`}
+                  {el.user.isOnline ? <p className={styles.online}>Сейчас в сети</p>
+                    : <p className={styles.online}>{`Был(-a) в сети ${lastSeen(el.user.lastSeen)} назад`}</p>}
                 </div>
               </div>
             ))}

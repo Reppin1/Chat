@@ -9,4 +9,7 @@ export const profileApi = {
   getProfile(id) {
     return instance.get(`/profile/${id}`);
   },
+  updateStatus({about}) {
+    return instance.post('/profile/about', {about});
+  },
 };

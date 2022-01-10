@@ -13,7 +13,6 @@ import { EnterCodeStep } from './Steps/EnterCodeStep/EnterCodeStep';
 import { UserApi } from './api/createUser';
 import { setAuthInfo } from './redux/AuthReducer/authReducer';
 import { Login } from './Steps/Login/Login';
-import { socket } from './Socket/socket';
 
 const steps = {
   0: WelcomeStep,
@@ -40,9 +39,6 @@ function App() {
       const user = await UserApi.authMe();
       if (user) {
         if (user.isActive) {
-          await socket.on('connect', () => {
-            console.log(socket.connected);
-          });
           dispatch(setAuthInfo(user));
           setRedirect(true);
           return null;

@@ -8,6 +8,7 @@ const SET_AVATAR = 'SET_AVATAR';
 const SET_EMAIL = 'SET_EMAIL';
 const SET_PASSWORD = 'SET_PASSWORD';
 const SET_AUTH_INFO = 'SET_AUTH_INFO';
+const SET_STATUS = 'SET_STATUS';
 
 const initialState = {
   fullName: '',
@@ -17,6 +18,7 @@ const initialState = {
   password: '',
   avatarUrl: '',
   isActive: false,
+  aboutMe: '',
 };
 
 const authReducer = (state = initialState, action) => {
@@ -41,6 +43,9 @@ const authReducer = (state = initialState, action) => {
     }
     case SET_AUTH_INFO: {
       return {...state, ...action.payload};
+    }
+    case SET_STATUS: {
+      return {...state, aboutMe: action.payload};
     }
     default:
       return state;
@@ -77,10 +82,22 @@ export const setPassword = (payload) => ({
   payload,
 });
 
+const setStatus = (payload) => ({
+  type: SET_STATUS,
+  payload,
+});
+
 export const setAuthInfo = (payload) => ({
   type: SET_AUTH_INFO,
   payload,
 });
+
+export const setProfileStatus = (about) => async (dispatch) => {
+  const result = await profileApi.updateStatus({about});
+  if (result.status === 200) {
+    dispatch(setStatus(about));
+  }
+};
 
 export const createUserAndSendSMS = (data) => async (dispatch) => {
   dispatch(setEmail(data.email));

@@ -11,6 +11,25 @@
   max-width: 350px;
 }
 
+.online {
+  padding-top: 8px;
+  color: white;
+}
+
+.onlineIcon {
+  background-color: #40e340;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 18px;
+  bottom: 20px;
+}
+
+.photo {
+  position: relative;
+}
+
 .empty {
   display: flex;
   justify-content: center;
@@ -51,5 +70,5 @@
 
 .name {
   color: white;
-  margin-top: 45px;
+  margin-top: 26px;
 }

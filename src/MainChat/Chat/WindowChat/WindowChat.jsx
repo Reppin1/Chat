@@ -7,27 +7,14 @@ import { messagesApi } from '../../../api/userMessages';
 import { addNewMessage, setMessage, setUserToChatWith } from '../../../redux/MessageReducer/messageReducer';
 import { socket } from '../../../Socket/socket';
 import { EmptyBlock } from '../../../Helpers/Empty';
+import { InputChat } from './InputChat/InputChat';
+import { Scrollbar } from '../Scrollbar/Scrollbar';
 
 const WindowChat = () => {
   const messages = useSelector((state) => state.messages.messages);
   const user = useSelector((state) => state.messages.user);
   const dialogId = useSelector((state) => state.dialogs.currentDialogId);
   const dispatch = useDispatch();
-  const [text, setInputValue] = React.useState('');
-  const sendMessage = async () => {
-    await messagesApi.sendMessage({dialogId, text});
-  };
-
-  const checkButtonPress = async (event) => {
-    if (event.key === 'Enter') {
-      await sendMessage();
-      setInputValue('');
-    }
-  };
-
-  const handleNewMessage = (message) => {
-    dispatch(addNewMessage(message));
-  };
 
   React.useEffect(() => {
     (async () => {
@@ -37,30 +24,33 @@ const WindowChat = () => {
     })();
   }, [dialogId]);
 
+  const handleNewMessage = (message) => {
+    if (message.DialogId === dialogId) {
+      dispatch(addNewMessage(message));
+    }
+  };
+
   React.useEffect(() => {
     socket.on('SERVER:NEW_MESSAGE', handleNewMessage);
     return () => socket.removeListener('SERVER:NEW_MESSAGE', handleNewMessage);
-  }, [dispatch]);
+  }, [dispatch, dialogId]);
 
-  // eslint-disable-next-line no-nested-ternary
   return dialogId ? (
     messages.length
       ? (
         <div className={styles.main}>
-          <div className={styles.messageItems}>
-            {messages.map((el) => (
-              <MessageItem key={el.id} message={el} user={user} />
-            ))}
+          <div className={styles.scrollbar}>
+            <Scrollbar messages={messages}>
+              <div className={styles.messageItems}>
+                {messages.map((el) => (
+                  <MessageItem key={el.id} message={el} user={user} />
+                ))}
+              </div>
+            </Scrollbar>
           </div>
           <div className={styles.inputMain}>
             <PaperClip />
-            <textarea
-              value={text}
-              onKeyDown={checkButtonPress}
-              onChange={(e) => setInputValue(e.target.value)}
-              className={styles.input}
-              placeholder="Введите сообщение"
-            />
+            <InputChat dialogId={dialogId} />
             <AddReaction />
             <Microphone />
           </div>
@@ -69,17 +59,11 @@ const WindowChat = () => {
       : (
         <div className={styles.main}>
           <div className={styles.empty}>
-            <EmptyBlock description="Ничего не найдено" />
+            <EmptyBlock description="Диалог пуст" />
           </div>
           <div className={styles.inputMainNotFound}>
             <PaperClip />
-            <textarea
-              value={text}
-              onKeyDown={checkButtonPress}
-              onChange={(e) => setInputValue(e.target.value)}
-              className={styles.input}
-              placeholder="Введите сообщение"
-            />
+            <InputChat dialogId={dialogId} />
             <AddReaction />
             <Microphone />
           </div>
