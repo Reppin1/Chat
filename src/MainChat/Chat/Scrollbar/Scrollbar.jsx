@@ -26,9 +26,10 @@ const Scrollbar = ({children, messages}) => {
           {...props}
           style={{
             ...style,
-            backgroundColor: '#3B3B3B',
+            backgroundColor: '#363333',
             paddingLeft: '4px',
             borderRadius: '14px',
+            boxShadow: '0 0 3px gray',
           }}
         />
       )}

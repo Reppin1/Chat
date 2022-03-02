@@ -1,12 +1,14 @@
 import { Link, useLocation } from 'react-router-dom';
 import React from 'react';
 import { useSelector } from 'react-redux';
+import io from 'socket.io-client';
 import styles from './header.module.css';
 import logo from '../../assets/chat.png';
 import { UserApi } from '../../api/createUser';
 import { getInitials } from '../../utils/getInitials';
 import { FindUserInput } from './FindUserInput/FindUserInput';
-import { socket } from '../../Socket/socket';
+
+const socket = io('http://localhost:4000', {withCredentials: true});
 
 const Header = () => {
   const path = useLocation().pathname;
@@ -20,14 +22,14 @@ const Header = () => {
     document.location.reload();
   };
 
-  const logSocket = (info) => {
-    console.log(info);
-  };
-
-  React.useEffect(() => {
-    socket.on('connect', logSocket);
-    return () => socket.removeListener('connect', logSocket);
-  }, []);
+  // const logSocket = (info) => {
+  //   console.log(info);
+  // };
+  //
+  // React.useEffect(() => {
+  //   socket.on('connect', logSocket);
+  //   return () => socket.removeListener('connect', logSocket);
+  // }, []);
 
   return (
     <div className={styles.main}>
@@ -52,4 +54,4 @@ const Header = () => {
   );
 };
 
-export { Header };
+export { Header, socket };

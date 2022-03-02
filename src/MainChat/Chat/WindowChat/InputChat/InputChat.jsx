@@ -10,7 +10,7 @@ const InputChat = ({dialogId}) => {
   };
 
   const checkButtonPress = async (event) => {
-    if (event.key === 'Enter') {
+    if (event.keyCode === 13) {
       await sendMessage();
       setInputValue('');
     }
@@ -28,7 +28,7 @@ const InputChat = ({dialogId}) => {
     <div>
       <textarea
         value={text}
-        onKeyDown={checkButtonPress}
+        onKeyUp={checkButtonPress}
         onChange={setInput}
         className={styles.input}
         placeholder="Введите сообщение"

@@ -31,6 +31,5 @@ export const localizationDate = (dateStr) => new Date(dateStr);
 
 export const getDate = (dateStr) => {
   const date = new Date(dateStr);
-  console.log(date);
   return dateFormat(date, 'mmm d, yyyy, HH:MM');
 };

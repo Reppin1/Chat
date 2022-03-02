@@ -1,6 +1,8 @@
 const SET_MESSAGES = 'SET_MESSAGES';
 const ADD_NEW_MESSAGE = 'ADD_NEW_MESSAGE';
 const SET_USER_TO_CHAT_WITH = 'SET_USER_TO_CHAT_WITH';
+const READ_MESSAGES = 'READ_MESSAGES';
+const READ_LAST_MESSAGE = 'READ_LAST_MESSAGE';
 
 const initialState = {
   messages: [],
@@ -24,6 +26,30 @@ export const messageReducer = (state = initialState, action) => {
         user: action.payload,
       };
     }
+    case READ_MESSAGES: {
+      return {
+        ...state,
+        messages: state.messages.map((message) => {
+          if (!message.read) {
+            if (message.UserId === action.id) {
+              return {...message, read: true};
+            }
+          }
+          return message;
+        }),
+      };
+    }
+    case READ_LAST_MESSAGE: {
+      return {
+        ...state,
+        messages: state.messages.map((message) => {
+          if (message.id === action.id) {
+            return {...message, read: true};
+          }
+          return message;
+        }),
+      };
+    }
     default:
       return state;
   }
@@ -32,6 +58,16 @@ export const messageReducer = (state = initialState, action) => {
 export const setMessage = (message) => ({
   type: SET_MESSAGES,
   payload: message,
+});
+
+export const readMessages = (id) => ({
+  type: READ_MESSAGES,
+  id,
+});
+
+export const readLastMessages = (messageId) => ({
+  type: READ_LAST_MESSAGE,
+  messageId,
 });
 
 export const setUserToChatWith = (user) => ({

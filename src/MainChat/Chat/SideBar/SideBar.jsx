@@ -8,9 +8,8 @@ import {
 import { dialogApi } from '../../../api/userDialogs';
 import { getInitials } from '../../../utils/getInitials';
 import { EmptyBlock } from '../../../Helpers/Empty';
-import { socket } from '../../../Socket/socket';
+import { socket } from '../../Header/Header';
 import { lastSeen } from '../../../Helpers/lastSeen';
-// import { getDate } from '../../../Helpers/localizationDate';
 
 const SideBar = () => {
   const dispatch = useDispatch();

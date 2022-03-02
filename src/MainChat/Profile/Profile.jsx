@@ -39,7 +39,7 @@ const Profile = () => {
 
   const updateStatus = async () => {
     try {
-      if (value.trim().length >= 1) {
+      if (value.trim().length) {
         await dispatch(setProfileStatus(value));
       }
     } catch (e) {
@@ -96,7 +96,6 @@ const Profile = () => {
                 </div>
               )
                 : <p className={styles.p}>{info.aboutMe}</p>}
-              {/* eslint-disable-next-line no-nested-ternary */}
               {myId === info.id
                 ? (
                   !popup ? (

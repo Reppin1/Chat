@@ -10,13 +10,29 @@
 .p {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   max-width: 550px;
   word-break: break-word;
+}
+
+.statusReverse {
+  margin-bottom: 8px;
+  margin-right: 6px;
+  width: 10px;
+  height: 10px;
+}
+
+.statusReverseNoRead {
+  margin-bottom: 8px;
+  margin-right: 10px;
+  width: 10px;
+  height: 10px;
 }
 
 .pReverse {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   max-width: 550px;
   min-width: 10px;
   word-break: break-word;
@@ -31,6 +47,7 @@
 
 .reverseMessageText {
   background-color: #683db8;
+  max-width: 534px;
   border-radius: 8px;
   padding: 10px;
   color: white;

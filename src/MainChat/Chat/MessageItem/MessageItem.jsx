@@ -1,11 +1,12 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { ReadIcon } from './readIcon/readIcon';
 import styles from './messageItem.module.css';
 import { getInitials } from '../../../utils/getInitials';
 import { getDate } from '../../../Helpers/localizationDate';
 
 const MessageItem = ({message, user}) => {
-  const [me, setMe] = React.useState(true);
+  const [me, setMe] = React.useState(false);
   const myInfo = useSelector((state) => state.auth);
 
   const goToFriendProfile = () => {
@@ -18,7 +19,7 @@ const MessageItem = ({message, user}) => {
 
   React.useEffect(() => {
     if (message.UserId === myInfo.id) {
-      setMe(false);
+      setMe(true);
       return null;
     }
     return null;
@@ -26,7 +27,7 @@ const MessageItem = ({message, user}) => {
 
   return (
     <div className={styles.main}>
-      {me
+      {!me
         ? (
           <div className={styles.messageItem}>
             {user.avatarUrl
@@ -47,9 +48,9 @@ const MessageItem = ({message, user}) => {
                 <span className={styles.date}>{getDate(message.createdAt)}</span>
               </div>
               <div className={styles.message}>
-                <div className={styles.p}>
+                <span className={styles.p}>
                   <span className={styles.messageText}>{message.text}</span>
-                </div>
+                </span>
               </div>
             </div>
           </div>
@@ -71,6 +72,7 @@ const MessageItem = ({message, user}) => {
               </div>
               <div className={styles.message}>
                 <div className={styles.pReverse}>
+                  <ReadIcon isMe={me} isReaded={message.read} />
                   <span className={styles.reverseMessageText}>{message.text}</span>
                 </div>
               </div>

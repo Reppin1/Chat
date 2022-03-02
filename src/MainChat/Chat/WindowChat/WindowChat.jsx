@@ -4,14 +4,21 @@ import { MessageItem } from '../MessageItem/MessageItem';
 import { AddReaction, Microphone, PaperClip } from './Icons/Icons';
 import styles from './chat.module.css';
 import { messagesApi } from '../../../api/userMessages';
-import { addNewMessage, setMessage, setUserToChatWith } from '../../../redux/MessageReducer/messageReducer';
-import { socket } from '../../../Socket/socket';
+import {
+  addNewMessage, readLastMessages,
+  readMessages,
+  setMessage,
+  setUserToChatWith,
+// eslint-disable-next-line import/named
+} from '../../../redux/MessageReducer/messageReducer';
+import { socket } from '../../Header/Header';
 import { EmptyBlock } from '../../../Helpers/Empty';
 import { InputChat } from './InputChat/InputChat';
 import { Scrollbar } from '../Scrollbar/Scrollbar';
 
 const WindowChat = () => {
   const messages = useSelector((state) => state.messages.messages);
+  const id = useSelector((state) => state.auth.id);
   const user = useSelector((state) => state.messages.user);
   const dialogId = useSelector((state) => state.dialogs.currentDialogId);
   const dispatch = useDispatch();
@@ -30,9 +37,28 @@ const WindowChat = () => {
     }
   };
 
+  const readLastMessage = (message) => {
+    if (message.DialogId === dialogId) {
+      dispatch(readLastMessages(message.id));
+    }
+  };
+
+  const readMessage = () => {
+    dispatch(readMessages(id));
+  };
+
+  React.useEffect(() => {
+    socket.on('SERVER:READ_MESSAGES', readMessage);
+    return () => socket.removeListener('SERVER:READ_MESSAGES', readMessage);
+  }, [dispatch]);
+
   React.useEffect(() => {
     socket.on('SERVER:NEW_MESSAGE', handleNewMessage);
-    return () => socket.removeListener('SERVER:NEW_MESSAGE', handleNewMessage);
+    socket.emit('SERVER:READ_MESSAGE', readLastMessage);
+    return () => {
+      socket.removeListener('SERVER:NEW_MESSAGE', handleNewMessage);
+      socket.removeListener('SERVER:READ_MESSAGE', readLastMessage);
+    };
   }, [dispatch, dialogId]);
 
   return dialogId ? (
